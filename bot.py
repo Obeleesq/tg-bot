@@ -2,7 +2,10 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time
 
-BOT_TOKEN = "8478167193:AAGBizO4W-DYA4UjXkjmCbYtxFzEJGPSrJA"
+import os
+
+BOT_TOKEN = os.getenv("8478167193:AAGBizO4W-DYA4UjXkjmCbYtxFzEJGPSrJA")
+
 ADMIN_ID = 1356461035
 
 bot = Bot(token=BOT_TOKEN)
@@ -198,3 +201,4 @@ async def back(callback: types.CallbackQuery):
 # ================== ЗАПУСК ==================
 if __name__ == "__main__":
     executor.start_polling(dp)
+
